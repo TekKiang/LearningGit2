@@ -1,0 +1,61 @@
+<html>
+
+<head>Task 2</head>
+
+<body>
+
+<p id="Q1"></p>
+<p id = "Q2"></p>
+<p id = "Q3"></p>
+<p id = "Q4"></p>
+
+<script>
+
+//task 2 Q1
+var numbers = new Array(75.43, 18.76, 99.41, 18.78, 74.53, 86.81, 23.51, 66.17);
+document.getElementById("Q1").innerHTML = "1. Arrays number = {" + numbers +"}";
+
+//task 2 Q2
+var i;
+var sum=0;
+
+for(i = 0; i < numbers.length; i++){
+	sum += numbers[i];
+}
+
+sum = Math.round(sum).toFixed(4);
+avg = sum/numbers.length.toFixed(4);
+
+document.getElementById("Q2").innerHTML = "2. Sum = " + sum + "Average = " + avg;
+
+//task 2 Q3
+var numbers_2 =[];	
+
+for (i=0; i<numbers.length; i++){
+	numbers_2[i] = numbers[i] * 0.8683;
+	numbers_2[i] =  numbers_2[i].toFixed(2);
+}
+
+document.getElementById("Q3").innerHTML = "3. New Array Numbers = {" + numbers_2 + "}"; 
+
+//Task 2 Q4
+var customer = {
+	id:"P8681",
+	name:"Foo Yoke Kai",	
+	age:23,
+	email:"fyk@gmail.com",
+	phone:"+60123456789",
+	address:"UTAR Sg Long"
+};
+
+//Task 2 Q5
+document.getElementById("Q4").innerHTML = "4. Print object using for...in = <br> <br>";
+
+for (var property in customer){
+	document.getElementById("Q4").innerHTML += "&nbsp; &nbsp; &nbsp;" + property + ": " + customer[property] + "<br>"; 
+}
+
+</script>
+
+</body>
+</html>	
